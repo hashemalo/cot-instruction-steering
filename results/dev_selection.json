@@ -1,0 +1,32 @@
+{
+ "A": {
+  "name": "dev_A_L14_r0.1",
+  "layer": 14,
+  "r": 0.1,
+  "strict": 0.0625,
+  "wrong_frac": 0.04325213268195612,
+  "passed_quality_filter": true
+ },
+ "B": {
+  "name": "dev_B_L26_r0.4",
+  "layer": 26,
+  "r": 0.4,
+  "strict": 0.9583333333333334,
+  "wrong_frac": 0.00010751129472590661,
+  "passed_quality_filter": true
+ },
+ "C": {
+  "name": "dev_C_L26_r0.4",
+  "layer": 26,
+  "r": 0.4,
+  "strict": 0.875,
+  "wrong_frac": 0.00015099945951821194,
+  "passed_quality_filter": true
+ },
+ "primary": {
+  "vec": "B",
+  "layer": 26,
+  "r": 0.4
+ },
+ "rule": "per vector: among settings with valid-word rate >= 95% and distinct-3gram >= 90% of the unsteered dev reference, no letter-free traces, <= 2/48 traces under 32 tokens (collapse), and meta-mention rate <= reference + 10 pts, maximise strict compliance, then minimise wrong-case fraction, then prefer smaller r. Primary = A unless A's dev compliance is < half the best vector's or not above the unsteered reference."
+}
